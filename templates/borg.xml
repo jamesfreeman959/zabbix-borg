@@ -1,547 +1,216 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>3.2</version>
-    <date>2017-01-30T20:26:47Z</date>
+    <version>5.4</version>
+    <date>2022-03-17T20:08:41Z</date>
     <groups>
         <group>
+            <uuid>7df96b18c230490a9a0a9e2307226338</uuid>
             <name>Templates</name>
         </group>
     </groups>
     <templates>
         <template>
+            <uuid>4e9984c170fb412d8cc34c22af45bc8f</uuid>
             <template>Template App Borg Backup</template>
             <name>Template App Borg Backup</name>
-            <description/>
             <groups>
                 <group>
                     <name>Templates</name>
                 </group>
             </groups>
-            <applications>
-                <application>
-                    <name>Borg Backup Statistics</name>
-                </application>
-            </applications>
-            <items/>
             <discovery_rules>
                 <discovery_rule>
+                    <uuid>145f3b487dcb4b6e8b824b7f645ff16c</uuid>
                     <name>Borg Repositories Discovery</name>
-                    <type>0</type>
-                    <snmp_community/>
-                    <snmp_oid/>
                     <key>borg.discover</key>
-                    <delay>86400</delay>
-                    <status>0</status>
-                    <allowed_hosts/>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <filter>
-                        <evaltype>0</evaltype>
-                        <formula/>
-                        <conditions/>
-                    </filter>
-                    <lifetime>30</lifetime>
-                    <description/>
+                    <delay>3600</delay>
                     <item_prototypes>
                         <item_prototype>
+                            <uuid>3304d8a256974884879c43d80ec6f28d</uuid>
                             <name>{#HOST}:{#DIR} volume compressed size</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
                             <key>borg.all_compressed[{#PATH}]</key>
                             <delay>3600</delay>
-                            <history>90</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
                             <units>Bytes</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Borg Backup Statistics</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
+                            <tags>
+                                <tag>
+                                    <tag>Application</tag>
+                                    <value>Borg Backup Statistics</value>
+                                </tag>
+                            </tags>
                         </item_prototype>
                         <item_prototype>
+                            <uuid>4b5bf7bd283340258ac3b41323ae2db7</uuid>
                             <name>{#HOST}:{#DIR} volume deduplicated size</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
                             <key>borg.all_deduplicated[{#PATH}]</key>
                             <delay>3600</delay>
-                            <history>90</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
                             <units>Bytes</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Borg Backup Statistics</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
+                            <tags>
+                                <tag>
+                                    <tag>Application</tag>
+                                    <value>Borg Backup Statistics</value>
+                                </tag>
+                            </tags>
                         </item_prototype>
                         <item_prototype>
+                            <uuid>d17aefd482fd42fba9eb6f98b940be1c</uuid>
                             <name>{#HOST}:{#DIR} volume original size</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
                             <key>borg.all_original[{#PATH}]</key>
                             <delay>3600</delay>
-                            <history>90</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
                             <units>Bytes</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Borg Backup Statistics</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
+                            <tags>
+                                <tag>
+                                    <tag>Application</tag>
+                                    <value>Borg Backup Statistics</value>
+                                </tag>
+                            </tags>
                         </item_prototype>
                         <item_prototype>
+                            <uuid>a8b67e6c2a85457eb1f4d6e0e92c3f75</uuid>
+                            <name>{#HOST}:{#DIR} Check Result Status</name>
+                            <key>borg.check[{#PATH}]</key>
+                            <delay>3600</delay>
+                            <tags>
+                                <tag>
+                                    <tag>Application</tag>
+                                    <value>Borg Backup Statistics</value>
+                                </tag>
+                            </tags>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>a1abfc5a015b400db32d90dcbebc76ae</uuid>
+                                    <expression>last(/Template App Borg Backup/borg.check[{#PATH}],#1)&lt;&gt;0</expression>
+                                    <name>{#HOST}:{#DIR} Backups Check Failed</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>1d1ca5c9d1de463db3c20740a8aa7ecd</uuid>
                             <name>{#HOST}:{#DIR} end timestamp</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
                             <key>borg.end_timestamp[{#PATH}]</key>
                             <delay>3600</delay>
-                            <history>90</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Borg Backup Statistics</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
+                            <tags>
+                                <tag>
+                                    <tag>Application</tag>
+                                    <value>Borg Backup Statistics</value>
+                                </tag>
+                            </tags>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>c76b97611fab46a597fbd7ddc60ac1e7</uuid>
+                                    <expression>fuzzytime(/Template App Borg Backup/borg.end_timestamp[{#PATH}],108000s)=0</expression>
+                                    <name>{#HOST}:{#DIR} backup too old</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
                         </item_prototype>
                         <item_prototype>
+                            <uuid>cffe737ddec24beda22e1c9903477971</uuid>
                             <name>{#HOST}:{#DIR} end time</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
                             <key>borg.end_time[{#PATH}]</key>
                             <delay>3600</delay>
-                            <history>90</history>
                             <trends>0</trends>
-                            <status>0</status>
-                            <value_type>4</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Borg Backup Statistics</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
+                            <value_type>TEXT</value_type>
+                            <tags>
+                                <tag>
+                                    <tag>Application</tag>
+                                    <value>Borg Backup Statistics</value>
+                                </tag>
+                            </tags>
                         </item_prototype>
                         <item_prototype>
+                            <uuid>36a2a7ad75e34f19bd4a0c9225d1ccf9</uuid>
                             <name>{#HOST}:{#DIR} start timestamp</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
                             <key>borg.start_timestamp[{#PATH}]</key>
                             <delay>3600</delay>
-                            <history>90</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Borg Backup Statistics</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
+                            <tags>
+                                <tag>
+                                    <tag>Application</tag>
+                                    <value>Borg Backup Statistics</value>
+                                </tag>
+                            </tags>
                         </item_prototype>
                         <item_prototype>
+                            <uuid>97858e1d236940d18140c4006b9b4d98</uuid>
                             <name>{#HOST}:{#DIR} start time</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
                             <key>borg.start_time[{#PATH}]</key>
                             <delay>3600</delay>
-                            <history>90</history>
                             <trends>0</trends>
-                            <status>0</status>
-                            <value_type>4</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Borg Backup Statistics</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
+                            <value_type>TEXT</value_type>
+                            <tags>
+                                <tag>
+                                    <tag>Application</tag>
+                                    <value>Borg Backup Statistics</value>
+                                </tag>
+                            </tags>
                         </item_prototype>
                         <item_prototype>
+                            <uuid>e2cf851736934afaaf5b8150a935c36a</uuid>
                             <name>{#HOST}:{#DIR} last backup compressed size</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
                             <key>borg.this_compressed[{#PATH}]</key>
                             <delay>3600</delay>
-                            <history>90</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
                             <units>Bytes</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Borg Backup Statistics</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
+                            <tags>
+                                <tag>
+                                    <tag>Application</tag>
+                                    <value>Borg Backup Statistics</value>
+                                </tag>
+                            </tags>
                         </item_prototype>
                         <item_prototype>
+                            <uuid>40fab5e2b9774b88afa58c3fd8de94e6</uuid>
                             <name>{#HOST}:{#DIR} last backup deduplicated size</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
                             <key>borg.this_deduplicated[{#PATH}]</key>
                             <delay>3600</delay>
-                            <history>90</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
                             <units>Bytes</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Borg Backup Statistics</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
+                            <tags>
+                                <tag>
+                                    <tag>Application</tag>
+                                    <value>Borg Backup Statistics</value>
+                                </tag>
+                            </tags>
                         </item_prototype>
                         <item_prototype>
+                            <uuid>1b6a9dac0cbc4554834e7baf9abc1093</uuid>
                             <name>{#HOST}:{#DIR} last backup original size</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
                             <key>borg.this_original[{#PATH}]</key>
                             <delay>3600</delay>
-                            <history>90</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
                             <units>Bytes</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Borg Backup Statistics</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
+                            <tags>
+                                <tag>
+                                    <tag>Application</tag>
+                                    <value>Borg Backup Statistics</value>
+                                </tag>
+                            </tags>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>2d2593d9920f40f19c7b498eb53027f6</uuid>
+                            <name>{#HOST}:{#DIR} Valid Backup info present</name>
+                            <key>borg.valid[{#PATH}]</key>
+                            <delay>3600</delay>
+                            <tags>
+                                <tag>
+                                    <tag>Application</tag>
+                                    <value>Borg Backup Statistics</value>
+                                </tag>
+                            </tags>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>c1d54cae52674417a6c0237916b4646d</uuid>
+                                    <expression>last(/Template App Borg Backup/borg.valid[{#PATH}],#1)&lt;&gt;0</expression>
+                                    <name>{#HOST}:{#DIR} Valid Backup info not present</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes>
-                        <trigger_prototype>
-                            <expression>{Template App Borg Backup:borg.end_timestamp[{#PATH}].fuzzytime(108000)}=0</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
-                            <name>{#HOST}:{#DIR} backup too old</name>
-                            <correlation_mode>0</correlation_mode>
-                            <correlation_tag/>
-                            <url/>
-                            <status>0</status>
-                            <priority>2</priority>
-                            <description/>
-                            <type>0</type>
-                            <manual_close>0</manual_close>
-                            <dependencies/>
-                            <tags/>
-                        </trigger_prototype>
-                    </trigger_prototypes>
                     <graph_prototypes>
                         <graph_prototype>
+                            <uuid>00df34255c034212a34cd436ccd0a116</uuid>
                             <name>Borg {#HOST}:{#DIR} last backup</name>
-                            <width>900</width>
-                            <height>200</height>
-                            <yaxismin>0.0000</yaxismin>
-                            <yaxismax>100.0000</yaxismax>
-                            <show_work_period>1</show_work_period>
-                            <show_triggers>1</show_triggers>
-                            <type>0</type>
-                            <show_legend>1</show_legend>
-                            <show_3d>0</show_3d>
-                            <percent_left>0.0000</percent_left>
-                            <percent_right>0.0000</percent_right>
-                            <ymin_type_1>0</ymin_type_1>
-                            <ymax_type_1>0</ymax_type_1>
-                            <ymin_item_1>0</ymin_item_1>
-                            <ymax_item_1>0</ymax_item_1>
                             <graph_items>
                                 <graph_item>
-                                    <sortorder>0</sortorder>
-                                    <drawtype>0</drawtype>
                                     <color>1A7C11</color>
-                                    <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
-                                    <type>0</type>
                                     <item>
                                         <host>Template App Borg Backup</host>
                                         <key>borg.this_deduplicated[{#PATH}]</key>
@@ -549,11 +218,8 @@
                                 </graph_item>
                                 <graph_item>
                                     <sortorder>1</sortorder>
-                                    <drawtype>0</drawtype>
                                     <color>F63100</color>
-                                    <yaxisside>1</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
-                                    <type>0</type>
+                                    <yaxisside>RIGHT</yaxisside>
                                     <item>
                                         <host>Template App Borg Backup</host>
                                         <key>borg.this_original[{#PATH}]</key>
@@ -562,30 +228,11 @@
                             </graph_items>
                         </graph_prototype>
                         <graph_prototype>
+                            <uuid>723f6f61e0f748f69773891348b1c045</uuid>
                             <name>Borg {#HOST}:{#DIR} volume size</name>
-                            <width>900</width>
-                            <height>200</height>
-                            <yaxismin>0.0000</yaxismin>
-                            <yaxismax>100.0000</yaxismax>
-                            <show_work_period>1</show_work_period>
-                            <show_triggers>1</show_triggers>
-                            <type>0</type>
-                            <show_legend>1</show_legend>
-                            <show_3d>0</show_3d>
-                            <percent_left>0.0000</percent_left>
-                            <percent_right>0.0000</percent_right>
-                            <ymin_type_1>0</ymin_type_1>
-                            <ymax_type_1>0</ymax_type_1>
-                            <ymin_item_1>0</ymin_item_1>
-                            <ymax_item_1>0</ymax_item_1>
                             <graph_items>
                                 <graph_item>
-                                    <sortorder>0</sortorder>
-                                    <drawtype>0</drawtype>
                                     <color>1A7C11</color>
-                                    <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
-                                    <type>0</type>
                                     <item>
                                         <host>Template App Borg Backup</host>
                                         <key>borg.all_deduplicated[{#PATH}]</key>
@@ -593,11 +240,8 @@
                                 </graph_item>
                                 <graph_item>
                                     <sortorder>1</sortorder>
-                                    <drawtype>0</drawtype>
                                     <color>F63100</color>
-                                    <yaxisside>1</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
-                                    <type>0</type>
+                                    <yaxisside>RIGHT</yaxisside>
                                     <item>
                                         <host>Template App Borg Backup</host>
                                         <key>borg.all_original[{#PATH}]</key>
@@ -606,13 +250,8 @@
                             </graph_items>
                         </graph_prototype>
                     </graph_prototypes>
-                    <host_prototypes/>
                 </discovery_rule>
             </discovery_rules>
-            <httptests/>
-            <macros/>
-            <templates/>
-            <screens/>
         </template>
     </templates>
 </zabbix_export>
