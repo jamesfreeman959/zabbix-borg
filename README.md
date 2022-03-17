@@ -11,7 +11,9 @@ One possibility is to use `--umask=0027` parameter when invoking `borg` command 
 
 Otherwise, use ACL's - for example:
 
+```
 find /backups -type d -exec setfacl -m u:zabbix:rx,default:u:zabbix:rx,g:zabbix:rx,default:g:zabbix:rx '{}' \; ; find /nas01/backups -type f -exec setfacl -m u:zabbix:r,g:zabbix:r '{}' \; &
+```
 
 # Timeout
 
