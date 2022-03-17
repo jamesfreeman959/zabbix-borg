@@ -30,7 +30,7 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>borg.discover</key>
-                    <delay>3600</delay>
+                    <delay>86400</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
